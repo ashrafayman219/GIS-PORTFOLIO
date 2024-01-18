@@ -20,28 +20,37 @@
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
 
+    <link rel="shortcut icon" href="#">
+    
     <!-- Normalize Library -->
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   </head>
 
-  <body class="home d-flex flex-column min-vh-100">
+  <body class="home-1 d-flex flex-column min-vh-100" style="overflow: hidden">
     
+    <div class="page-loader">
+      <div class="spinner"></div>
+      <div class="txt">GO AHEAD!<br>WELCOME</div>
+    </div>
+
     <!-- Header -->
     <div class="header d-flex justify-content-center align-items-center">
-      <div class="text-center">
+      <div class="first-project text-center pt-2">
         <img class="photo img-fluid m-lg-3 m-md-3 m-sm-3 m- rounded-circle"
         data-bs-toggle="tooltip" data-bs-title="Ashraf Ayman Abdel Majeed"
         src="https://avatars.githubusercontent.com/u/140410745?v=4" alt="">
-        <h1 class="my-name display-3">Ashraf Ayman</h1>
-        <p class="my-job-position fs-5"><span data-bs-toggle="tooltip" data-bs-title="Geographic Information Systems">GIS</span> Software Developer</p>
+        <h1 class="my-name display-3 mb-0">Ashraf Ayman</h1>
+        <p class="my-job-position fs-5 mb-2"><span data-bs-toggle="tooltip" data-bs-title="Geographic Information Systems">GIS</span> Software Developer, GIS Analyst, GIS Specialist</p>
 
-        <span class="social-icons">
-          <a href="https://github.com/ashrafayman219" title="GitHub" target="_blank" class="github"><i class="fa-2x p-2 mb-2 ms-auto fa-brands fa-github"></i></a>
-        </span>
-        <div class="vr mb-2" style="color: snow; height: 38px; width: 2px; border-radius: 10%;"></div>
-        <span class="social-icons">
-          <a href="https://www.linkedin.com/in/ashraf-ayman" title="LinkedIn" target="_blank" class="linkedin"><i class="fa-2x p-2 mb-2 fa-brands fa-linkedin"></i></a>
-        </span>
+        <!-- Github Button -->
+          <a href="https://github.com/ashrafayman219"  target="blank" class="social-icon github mb-3 no-deco">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+
+        <!-- LinkedIn Button -->
+          <a href="https://www.linkedin.com/in/ashraf-ayman" target="blank" class="no-deco social-icon linkedin">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a> 
 
       </div>
     </div>
@@ -52,21 +61,21 @@
     </button>
 
     <!-- Navbar -->
-    <nav class="navbar nav-underline navbar-expand-lg sticky-top">
+    <nav class="navbar nav navbar-expand-lg sticky-top">
       <div class="container">
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="main">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="#">Home</a>
+          <ul class="navbar-nav mx-auto ">
+            <li class="nav-item active">
+              <a class="nav-link " aria-current="page" href="#">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3" href="resume.html">Resume</a>
+              <a class="nav-link " href="resume.html">RESUME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3" href="blog.html">Blog</a>
+              <a class="nav-link " href="blog.html">BLOG</a>
             </li>
           </ul>
         </div>
@@ -76,9 +85,11 @@
 
     <!-- About section -->
     <div class="sec-main text-center p-4 rounded">
-      <h1 class="about">Me</h1>
-      <p class="fs-4">Hi! I'm a GIS Software Developer, building web GIS apps, and using the ArcGIS API for JS and new GIS technologies to get the optimize solution 
-        for the different scenarios! <br> I am currently with the GULF TERMINAL and I live and work in beautiful Mansoura, D.C of Dakahlia in Egypt.
+      <h2 class="about drop-in">About</h2>
+      <p class="fs-5 drop-in-2">Hi! I'm Ashraf Ayman, skilled in GIS Development, Location Intelligence, .NET, and developing GIS solutions.
+        <br> I bring expertise in Geo-informatics technologies, web development, and GIS Integration, with a strong commitment to GIS development.
+        <br> My goal is to excel as a GIS Developer and collaborate on exciting projects.
+        <!-- <br> I am currently with the GULF TERMINAL and I live and work in beautiful Mansoura, D.C of Dakahlia in Egypt. -->
       </p>
     </div>
 
@@ -93,12 +104,10 @@
             <i class="bx bx-x close-icon"></i>
           </div>
           <div class="popup-notes">
-            <i class='bx bxs-edit flip-icon'></i>
-            <!-- <i class='bx bx-reflect-vertical flip-icon'></i> -->
-            <h1 class="modal__title">Register Your Number</h1>
-            <p class="m-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore recusandae
-              sequi hic tempora est minus nesciunt commodi, voluptatem magni a ea officiis itaque quos ullam ut rem sint atque maiores.
-            </p>
+            <!-- <i class='bx bxs-edit flip-icon pt-4'></i> -->
+            <i class='bx bx-reflect-vertical flip-icon pt-4'></i>
+            <h5 class=" pt-2">GO AHEAD, HOVER PROJECTS</h5>
+            <p class="fs-5 m-3">Explore projects using press or hover on each to flip them.</p>
           </div>
           <!-- <input type="text" placeholder="Enter Your Number" class="reg" /> -->
           <button onclick="closeModal()" class="modal__button modal__button-width mt-auto">Done <i class="bx bx-chevrons-right bx-fade-right"></i></button>
@@ -106,195 +115,9 @@
       </div>
     </section>
 
-
-
-
-
-
     
     <!-- portfolio section -->
     <!-- <section class="sec-main"> -->
-
-    <!-- <div class="profile-sec text-center">
-      <div class="container">
-        <div class="profile pt-5 pb-4">
-          <h2 class="gis-port">GIS PORTFOLIO</h2>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-          
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-          
-        </div>
-      </div>
-    </div> -->
 
     <div class="profile-sec text-center">
       <div class="container">
@@ -302,6 +125,91 @@
           <h2 class="gis-port">GIS PORTFOLIO</h2>
         </div>
         <div class="row align-items-center ">
+
+          <!-- esri-Library (APIs) -->
+          <div class="col-md-6 col-lg-4 cardBox">
+            <div class="card-1">
+              <div class="front">
+                <img class="img-fluid" src="images/esri-library.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
+              </div>
+
+              <div class="back d-flex align-items-center justify-content-center flex-column">
+                <p class="mt-auto notes-proj">Another achievement added to my professional career with Gulf Terminal.​</p>
+                <a type="button" href="esri-Library.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" 
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="proj-title-main pt-3 pb-3">esri-Library (APIs)</h4>
+          </div>
+
+          <!-- COP27 - Sharm El-Sheikh -->
+          <div class="col-md-6 col-lg-4 cardBox">
+            <div class="card-1">
+              <div class="front">
+                <img class="img-fluid" src="images/Sharm.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
+              </div>
+
+              <div class="back d-flex align-items-center justify-content-center flex-column">
+                <p class="mt-auto notes-proj">Find out what was accomplished at COP27 in Sharm El-Sheikh.​</p>
+                <a type="button" href="COP27.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" 
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="proj-title-main pt-3 pb-3">COP27 - Sharm El-Sheikh</h4>
+          </div>
+
+          <!-- Geowarehouse Solutions -->
+          <div class="col-md-6 col-lg-4 cardBox">
+            <div class="card-1">
+              <div class="front">
+                <img class="img-fluid" src="images/website-screen.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
+              </div>
+
+              <div class="back d-flex align-items-center justify-content-center flex-column">
+                <p class="mt-auto notes-proj">
+                  <span class="notess">Geowarehouse Solutions!</span> <br>
+                  FINAL PROJECT - ITI
+                </p>
+                <a type="button" href="geowarehouse.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" 
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="proj-title-main pt-3 pb-3">Geowarehouse Solutions</h4>
+          </div>
+
+          <!-- Clustring -->
+          <div class="col-md-6 col-lg-4 cardBox">
+            <div class="card-1">
+              <div class="front">
+                <img class="img-fluid" src="images/clustring.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
+              </div>
+
+              <div class="back d-flex align-items-center justify-content-center flex-column">
+                <p class="mt-auto notes-proj">This was entirely a personal project done for learning.​</p>
+                <a type="button" href="clustring.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" 
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="proj-title-main pt-3 pb-3">Clustring</h4>
+          </div>
+
+          <!-- City Filtering -->
           <div class="col-md-6 col-lg-4 cardBox">
             <div class="card-1">
               <div class="front">
@@ -309,7 +217,7 @@
               </div>
 
               <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p class="mt-auto notes-proj">This was entirely a personal project done for learning.​</p>
                 <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
                   fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" 
@@ -321,158 +229,7 @@
             <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
           </div>
 
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
 
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-          
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-
-          <div class="col-md-6 col-lg-4 cardBox">
-            <div class="card-1">
-              <div class="front">
-                <img class="img-fluid" src="images/city-filltering.png" style="width: 100%; height: 100%; object-fit: fill;" alt="">
-              </div>
-
-              <div class="back d-flex align-items-center justify-content-center flex-column">
-                <p class="mt-auto notes-proj">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a type="button" href="City Filtering.html" class="btn btn-dark btn-b mt-auto">DETAILS HERE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-                  fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" 
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h4 class="proj-title-main pt-3 pb-3">City Filtering</h4>
-          </div>
-          
         </div>
       </div>
     </div>

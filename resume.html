@@ -30,19 +30,27 @@
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   </head>
 
-  <body class="home d-flex flex-column min-vh-100">
+  <body class="home-1  d-flex flex-column min-vh-100" style="overflow: hidden">
     
+    <div class="page-loader-1">
+      <div class="spinner"></div>
+      <div class="txt">GO AHEAD!<br>WELCOME</div>
+    </div>
+
     <!-- Header -->
     <div class="header-project d-flex justify-content-center align-items-center">
       <div class="text-center pt-4">
-        <h1 class="my-name display-3">Ashraf Ayman</h1>
-        <span class="social-icons">
-          <a href="https://github.com/ashrafayman219" title="GitHub" target="_blank" class="github"><i class="fa-2x p-2 mb-2 ms-auto fa-brands fa-github"></i></a>
-        </span>
-        <div class="vr mb-2" style="color: snow; height: 38px; width: 2px; border-radius: 10%;"></div>
-        <span class="social-icons">
-          <a href="https://www.linkedin.com/in/ashraf-ayman" title="LinkedIn" target="_blank" class="linkedin"><i class="fa-2x p-2 mb-2 fa-brands fa-linkedin"></i></a>
-        </span>
+        <h1 class="my-name my-name-3 display-3">Ashraf Ayman</h1>
+
+        <!-- Github Button -->
+        <a href="https://github.com/ashrafayman219"  target="blank" class="social-icon github no-deco mb-1">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <!-- LinkedIn Button -->
+        <a href="https://www.linkedin.com/in/ashraf-ayman" target="blank" class="social-icon linkedin no-deco">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a> 
+
       </div>
     </div>
 
@@ -53,21 +61,21 @@
 
 
     <!-- Navbar -->
-    <nav class="navbar nav-underline navbar-expand-lg sticky-top">
+    <nav class="navbar nav navbar-expand-lg sticky-top">
       <div class="container">
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="main">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mx-auto ">
             <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3 " aria-current="page" href="index.html">Home</a>
+              <a class="nav-link " aria-current="page" href="index.html">HOME</a>
             </li>
-            <li class="nav-item ">
-              <a class="nav-link p-2 p-lg-3 active" href="#">Resume</a>
+            <li class="nav-item active">
+              <a class="nav-link " href="#">RESUME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3 " href="blog.html">Blog</a>
+              <a class="nav-link  " href="blog.html">BLOG</a>
             </li>
           </ul>
         </div>
@@ -79,14 +87,14 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="text-center pb-4 align-self-start">
-            <h1 class="resume">Resume</h1>
-            <a class="link-success fw-bolder res link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-            data-toggle="tooltip" id="element" data-placement="top" title="Click to download my resume"
-            href="/images/myw3schoolsimage.jpg">One-Page Resume (PDF)</a>
-            <br>
-            <a class="link-success fw-bolder res link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+            <h2 class="resume">Resume</h2>
+            <a class="link-projects-here resume-link d-inline-block" download="Ashraf Ayman CV - GIS Developer"
             data-toggle="tooltip" id="element" data-placement="top" title="Click to download my CV"
-            href="/images/myw3schoolsimage.jpg">Curriculum Vitae (PDF)</a>
+            href="files/Ashraf Ayman CV.pdf">Curriculum Vitae (PDF)</a>
+            <br>
+            <a class="link-projects-here resume-link d-inline-block" download="Ashraf Ayman CV - GIS Developer"
+            data-toggle="tooltip" id="element" data-placement="top" title="Click to download my resume"
+            href="files/Ashraf Ayman resume.pdf">One-Page Resume (PDF)</a>
           </div>
 
           <!-- left sec -->
@@ -96,27 +104,27 @@
               <div class="card-header hd text-center edu-zero">Education</div>
               <div class="card-body text-center">
                 <img class="img-fluid" style="width: 142px; height: 154px; object-fit: fill;" src="images/MU-logo.jpg" alt="Responsive image">
-                <h6 class="card-title fw-bolder">Mansoura University</h6>
-                <p class="card-text">Master of Science in Geographic Information Science, <em>May 2015</em></p>
+                <h6 class="card-title fw-bolder text-center">Mansoura University</h6>
+                <p class="card-text text-center">Bachelor of Arts, Department of Surveying, Remote Sensing & GIS, <em>June 2021</em></p>
               </div>
               <div class="card edu-one">
                 <div class="card-body text-center">
                   <img class="img-fluid" style="width: 213px; height: 99px; object-fit: fill;" src="images/iti.PNG" alt="Responsive image">
-                  <h6 class="card-title fw-bolder">Information Technology Institute (ITI)</h6>
-                  <p class="card-text">Master of Science in Geographic Information Science, <em>May 2015</em></p>
+                  <h6 class="card-title fw-bolder text-center">Information Technology Institute (ITI)</h6>
+                  <p class="card-text text-center">5 Months Intensive Training Program of GIS and Web Development, <em>April 2022</em></p>
                 </div>
               </div>
               <div class="card edu-two">
                 <div class="card-body text-center">
                   <img class="img-fluid" style="width: 201px; height: 102px; object-fit: fill;" src="images/nti.jpg" alt="Responsive image">
-                  <h6 class="card-title fw-bolder">National Telecommunication Institute (NTI)</h6>
-                  <p class="card-text">Master of Science in Geographic Information Science, <em>May 2015</em></p>
+                  <h6 class="card-title fw-bolder text-center">National Telecommunication Institute (NTI)</h6>
+                  <p class="card-text text-center">Evening Digital Egypt Youth Program, Front-End Web Development track, <em>Feb, 2023</em></p>
                 </div>
               </div>
             </div>
 
             <!-- Memberships -->
-            <div>
+            <!-- <div>
               <div class="card mt-4 memberships">
                 <div class="card-header hd text-center membership-hd">Memberships</div>
                 <div class="card-body">
@@ -125,7 +133,7 @@
                   <p class="card-text">Deputy Member for the Library of Congress, <em>March 2019 - Present</em></p>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- Honors -->
             <div>
@@ -133,9 +141,8 @@
                   <div class="card-header hd text-center honors-hd">Honors</div>
                 </div>
                 <ul class="list-group list-group-flush card-body honors-borders">
-                  <li class="list-group-item honors-borders-1">Geography Departmental Honors for completing undergraduate thesis, 
-                    Media Representations and Place Perceptions of Stigmatized Neighborhoods in Washington, D.C., 2010</li>
-                  <li class="list-group-item honors-borders-2">Harold Thompson Straw Award for Professional Promise and Potential for Scholarly Contribution, 2010</li>
+                  <li class="list-group-item honors-borders-1">Bachelor’s degree in GIS and Remote Sensing Honours for completing undergraduate, 2021</li>
+                  <!-- <li class="list-group-item honors-borders-2">Harold Thompson Straw Award for Professional Promise and Potential for Scholarly Contribution, 2010</li> -->
                   <!-- <li class="list-group-item">Richard P. Palmieri Award for Excellence in Geography, 2009</li>
                   <li class="list-group-item">Member of the Phi Beta Kappa Society</li>
                   <li class="list-group-item">Member of Gamma Theta Upsilon</li>
@@ -144,7 +151,7 @@
             </div>
 
             <!-- Activities -->
-            <div>
+            <!-- <div>
               <div class="card mt-4 activities">
                 <div class="card-header hd text-center activities-hd">Activities</div>
 
@@ -155,7 +162,7 @@
                 <li class="list-group-item activities-borders-3">Co-Chair of the Constitutional Order Committee in the University of Mary Washington's Student Senate</li>
                 <li class="list-group-item activities-borders-4">Entertainment section writer for the University of Mary Washington newspaper The Bullet</li>
               </ul>
-            </div>
+            </div> -->
             <!-- <div></div> -->
           </div>
 
@@ -175,8 +182,9 @@
                         <img src="images/web-gis.jpg" style="width: 138px; height: 94px; object-fit: fill;" class="img-fluid" alt="...">
                       </div>
                       <div class="col-md-10">
-                        <div class="card-body text-center text-lg-start">
-                          <p class="card-text"><span class="fw-bolder">GIS Software/Web:</span> ArcGIS Pro, ArcGIS 9.3-10.7, ArcGIS Online, QGIS, Leaflet, PostGIS, GeoDa, Mapbox.</p>
+                        <div class="card-body ">
+                          <p class="card-text"><span class="fw-bolder">GIS Software/Web:</span> ArcGIS API for JS, ArcGIS Enterprise [Server, Portal, Online], ArcGIS Pro, 
+                            ArcGIS 10.3 - 10.8.1, M.App Enterprise, Geoserver, QGIS, Leaflet, PostgreSQL, Open Layers, PostGIS, Mapbox</p>
                         </div>
                       </div>
                     </div>
@@ -191,7 +199,8 @@
                       </div>
                       <div class="col-md-10">
                         <div class="card-body">
-                          <p class="card-text"><span class="fw-bolder">Programming:</span> Python, JavaScript (Beginner, focus on Leaflet and D3), SQL (Beginner), HTML/CSS</p>
+                          <p class="card-text"><span class="fw-bolder">Programming:</span> Python, JavaScript (Intermediate, focus on ArcGIS API for JS), OOP, 
+                            ASP.NET Core, MS SQL Server, SQL (Beginner), HTML/CSS</p>
                         </div>
                       </div>
                     </div>
@@ -206,7 +215,7 @@
                       </div>
                       <div class="col-md-10">
                         <div class="card-body">
-                          <p class="card-text"><span class="fw-bolder">Remote Sensing Software:</span> IDRISI Selva, ERDAS IMAGINE, PCI Geomatica, SOCET SET (Beginner)</p>
+                          <p class="card-text"><span class="fw-bolder">Remote Sensing Software:</span> ERDAS IMAGINE, ENVI</p>
                         </div>
                       </div>
                     </div>
@@ -220,7 +229,7 @@
             </div>
 
             <!-- professional experience -->
-            <div>
+            <div class="mb-4">
               <div class="card mt-4 experience">
                 <div class="card-header hd text-center experience-hd">Professional Experience</div>
               </div>
@@ -243,9 +252,14 @@
                 </li>
                 <li class="list-group-item experience-border-11">
                   <ul>
-                    <li class="">Created high quality maps and conducted geospatial research for congressional staff</li>
-                    <li class="">Spearheaded use of Esri "Story Maps" at the Library through technical teaching</li>
-                    <li class="">Managed GIS databases to improve data accuracy and efficient data-sharing practices across Capitol Hill</li>
+                    <li class="">Created a API (dynamic library) based on ArcGIS Maps SDK for JavaScript for building GIS web apps and 
+                      spatial analysis applications for 2D and 3D visualization.</li>
+                    <li class="">Designs, develops, and maintains software using ESRI software suite as well as programming tools.</li>
+                    <li class="">Developed programming specifications for assigned tasks.</li>
+                    <li class="">Gained possess strong knowledge of database concepts and RDBMS like Microsoft SQL Server, PostgreSQL, etc.</li>
+                    <li class="">Performs database design modifications.</li>
+                    <li class="">Tests system and confers with Project Managers to assure satisfaction.</li>
+                    <li class="">Created program source code; performs standardized validation tests; and debugs code when issues are identified.</li>
                   </ul>
                 </li>
               </ul>
@@ -259,8 +273,67 @@
                       </div>
                       <div class="col-md-9">
                         <div class="card-body">
-                          <p class="card-text"><span class="fw-bold">GIS Developer</span> (Jun 2022 - Feb 2023)</p>
+                          <p class="card-text"><span class="fw-bold">GIS Web Developer</span> (Jun 2022 - Feb 2023)</p>
                           <p class="card-text">Edge Pro for Information Systems</p>
+                          <p class="card-text">Cairo, Egypt.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item experience-border-11">
+                  <ul>
+                    <li class="">Developed and implemented customized client solutions and Create GIS demos for Clients.</li>
+                    <li class="">Familiar with ArcGIS API for JavaScript, Esri Technologies, JavaScript, Python and SQL.</li>
+                    <li class="">Participated in a GIS and RS project to be presented at COP 27, Sharm Elsheikh 2022.</li>
+                    <li class="">Familiar with ArcSDE, RDBMS, ArcGIS Sever, SQL Server, PostgreSQL.</li>
+                    <li class="">Familiar with Hexagon Technologies, ERDAS Imagine.</li>
+                    <li class="">Cooperate and communicate with relevant external bodies.</li>
+                    <li class="">Work closely with other developers and architects.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul class="list-group list-group-flush card-body experience-borders-100 border-radd">
+                <li class="list-group-item card-text experience-border-1">
+                  <div class="card skills-1">
+                    <div class="row g-0">
+                      <div class="col-md-3 text-center">
+                        <img src="images/edge.jpg" style="width: 205px; height: 126px; object-fit: fill;"  class="img-fluid" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <p class="card-text"><span class="fw-bold">GIS Technician</span> (Apr 2022 - Jun 2022)</p>
+                          <p class="card-text">Edge Pro for Information Systems</p>
+                          <p class="card-text">Cairo, Egypt.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item experience-border-11">
+                  <ul>
+                    <li class="">Discover trends and patterns through spatial mapping of data.</li>
+                    <li class="">Generate reports on geographic data using data visualizations.</li>
+                    <li class="">Developed mapping tools and applications.</li>
+                    <li class="">Sound Knowledge of GIS concepts like GIS Data formats, Projections, Editing of GIS Data, Geo-referencing.</li>
+                    <li class="">Review GIS data for accuracy and standardize geographic data.</li>
+                    <li class="">Dealing with databases for geospatial data.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- <ul class="list-group list-group-flush card-body experience-borders-400">
+                <li class="list-group-item card-text experience-border-1">
+                  <div class="card skills-1">
+                    <div class="row g-0">
+                      <div class="col-md-3 text-center">
+                        <img src="images/AIC.jpg" style="width: 202px; height: 140px; object-fit: fill;"  class="img-fluid" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <p class="card-text"><span class="fw-bold">Remote Sensing Data Reviewer</span> (July 2015 - Present)</p>
+                          <p class="card-text">Applied Innovation Center (AIC)</p>
                           <p class="card-text">Cairo, Egypt.</p>
                         </div>
                       </div>
@@ -274,63 +347,11 @@
                     <li class="">Managed GIS databases to improve data accuracy and efficient data-sharing practices across Capitol Hill</li>
                   </ul>
                 </li>
-              </ul>
-
-              <ul class="list-group list-group-flush card-body experience-borders-100">
-                <li class="list-group-item card-text experience-border-1">
-                  <div class="card skills-1">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="images/two.jpg" class="img-fluid" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Cartographer (July 2015 - Present)</p>
-                          <p class="card-text">Library of Congress, Geography and Map Division</p>
-                          <p class="card-text">Washington, D.C.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item experience-border-11">
-                  <ul>
-                    <li class="">Created high quality maps and conducted geospatial research for congressional staff</li>
-                    <li class="">Spearheaded use of Esri "Story Maps" at the Library through technical teaching</li>
-                    <li class="">Managed GIS databases to improve data accuracy and efficient data-sharing practices across Capitol Hill</li>
-                  </ul>
-                </li>
-              </ul>
-
-              <ul class="list-group list-group-flush card-body experience-borders-400">
-                <li class="list-group-item card-text experience-border-1">
-                  <div class="card skills-1">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="images/two.jpg" class="img-fluid" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Cartographer (July 2015 - Present)</p>
-                          <p class="card-text">Library of Congress, Geography and Map Division</p>
-                          <p class="card-text">Washington, D.C.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item experience-border-11">
-                  <ul>
-                    <li class="">Created high quality maps and conducted geospatial research for congressional staff</li>
-                    <li class="">Spearheaded use of Esri "Story Maps" at the Library through technical teaching</li>
-                    <li class="">Managed GIS databases to improve data accuracy and efficient data-sharing practices across Capitol Hill</li>
-                  </ul>
-                </li>
-              </ul>
+              </ul> -->
             </div>
 
             <!-- Major Coursework and Presentations -->
-            <div class="mb-4">
+            <!-- <div class="mb-4">
               <div class="card mt-4 activities">
                 <div class="card-header hd text-center activities-hd">Major Coursework and Presentations</div>
 
@@ -351,7 +372,7 @@
                 <li class="list-group-item activities-borders-3">Co-Chair of the Constitutional Order Committee in the University of Mary Washington's Student Senate</li>
                 <li class="list-group-item activities-borders-4">Entertainment section writer for the University of Mary Washington newspaper The Bullet</li>
               </ul>
-            </div>
+            </div> -->
 
             <!-- <div></div> -->
           

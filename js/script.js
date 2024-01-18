@@ -125,3 +125,62 @@ function backToTop() {
 
 
 
+
+/* to be added */
+
+// $(document).ready(function(){
+//   document.body.style.overflow = "hidden";
+//   $(this).scrollTop(0);
+// });
+
+
+$(window).on('load',function(){
+  // if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)
+  // {
+  //   document.body.style.overflowY = "hidden";
+  //   $(this).scrollTop(0);
+  // } 
+  // console.log(document.body, "document.body")
+  // document.body.classList.add(".fadde")
+	setTimeout(function(){ // allowing 3 secs to fade out loader
+    $('.page-loader').fadeOut('slow');
+    // document.body.classList.add(".fadde")
+    document.body.style.overflow = "auto";
+	},2000);
+});
+
+$(window).on('load',function(){
+  // if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)
+  // {
+  //   document.body.style.overflowY = "hidden";
+  //   $(this).scrollTop(0);
+  // } 
+  // console.log(document.body, "document.body")
+  // document.body.classList.add(".fadde")
+	setTimeout(function(){ // allowing 3 secs to fade out loader
+    $('.page-loader-1').fadeOut('slow');
+    // document.body.classList.add(".fadde")
+    document.body.style.overflow = "auto";
+	},1000);
+});
+
+$(document).on('click', '.nav-item', function(){
+  $(this).addClass('active').siblings().removeClass('active')
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* to be added */

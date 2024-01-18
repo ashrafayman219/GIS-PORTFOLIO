@@ -30,8 +30,9 @@
 }
 
 
+
 /* Body style */
-.home {
+.home-1 {
   background-color: #f8f8f8;
   /* font-family: 'Noto Sans', sans-serif; */
 }
@@ -54,9 +55,16 @@
   /* font-family: 'DM Serif Text', serif; */
   /* font-family: 'Nunito Sans', sans-serif; */
   font-family: "Avenir Next Variable", sans-serif;
-  font-size: 3.0625rem;
+  font-size: 2.5rem;
   font-weight: 550;
-  font-style: italic;
+  /* font-style: italic; */
+}
+
+
+@media (max-width: 565px) { 
+  .my-name-3 {
+    font-size: 2.2rem;
+  }
 }
 
 /* .proj-title {
@@ -84,10 +92,14 @@
 
 
 
-
+.resume-link {
+  font-size: 1.3rem;
+}
 
 
 .resume {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
@@ -118,8 +130,20 @@ footer p span {
   cursor: context-menu;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .fa-github, .fa-linkedin{
-  color: var(--my-fontColor);
+  /* color: var(--my-fontColor); */
 }
 
 .social-icons .github .fa-github:hover {
@@ -129,6 +153,132 @@ footer p span {
 .social-icons .linkedin .fa-linkedin:hover {
   color: var(--my-hover);
 }
+
+.no-deco {
+  text-decoration: none;
+}
+
+
+
+
+.first-project a,
+.first-project a:hover,
+.first-project a:focus,
+.first-project a:active {
+  text-decoration: none;
+}
+.social-icon i{
+  transition: .3s;
+}
+.social-icon {
+  margin: 10px 5px 0px 5px;
+  /* margin-top: 10px; */
+  letter-spacing: 10px;
+  box-sizing: border-box;
+  /* -moz-border-radius: 138px;
+  -webkit-border-radius: 138px;
+  border-radius: 138px; */
+  /* border: 5px solid; */
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  line-height: 1px;
+  transition: .6s;
+  /* box-shadow: 0 5px 4px rgba(0,0,0,.5); */
+  &:hover {
+    transform: translate(0, -10%);
+  }
+
+  /* Linkedin Button Styling */
+  &.linkedin {
+    font-size: 24px;
+    padding-top: 9px;
+    /* padding-left: 1px; */
+    background-color: #6e6e6e;
+    color: #ffffff;
+    /* border-color: #111111; */
+    border-color: #6e6e6e;
+    &:hover {
+      background-color: #0077b5;
+      color: #ffffff;
+      /* border-color: #0976b4; */
+    }
+  }
+
+
+  /* Github Button Styling */
+  &.github {
+    font-size: 24px;
+    padding-top: 9px;
+    background-color: #6e6e6e;
+    color: #ffffff;
+    border-color: #6e6e6e;
+    &:hover {
+      background-color: #0d1117;
+      color: #ffffff;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.link-projects-here {
+  text-decoration: none;
+  color: #0087ca;
+  font-weight: bold;
+}
+
+
+.link-projects-here::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: currentcolor;
+  transition: width .4s;
+}
+
+
+.link-projects-here:hover::after{
+  width: 100%;
+  transition: width .4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -164,10 +314,43 @@ footer p span {
   font-size: 18px;
 }
 
-.navbar .navbar-nav .nav-link.active,
+/* .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:hover {
-  color: var(--my-hover);
+  color: rgba(165, 218, 42, 0.722)
+} */
+
+.nav-item::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #FFF;
+  transition: width .4s;
+}
+
+/* .nav-item:focus::after, */
+/* .nav-item.active::after,
+.nav-item.active:hover::after,
+.nav-item:hover::after {
+  width: 100%;
+  transition: width .4s;
+} */
+
+.nav-item.active::after, .nav-item:hover::after{
+  width: 100%;
+  transition: width .4s;
+}
+
+/* .activee::after {
+  width: 100%;
+  transition: width 0s;
+} */
+
+
+.navbar-nav > li{
+  margin-left:30px;
+  margin-right:30px;
 }
 
 .navbar .navbar-toggler {
@@ -563,7 +746,7 @@ div .box:hover::before {
 
 .card-1 {
   background: #222;
-  cursor: default;
+  /* cursor: default; */
   height: 248px;
   transform-style: preserve-3d;
   transition: transform 0.4s ease 0s;
@@ -612,35 +795,50 @@ div .box:hover::before {
 } */
 
 .cardBox:nth-child(1) .card-1 .back {
-  background: cornflowerblue;
+  background: #2b2b2b;
 }
 
 .cardBox:nth-child(2) .card-1 .back {
-  background: orange;
+  background: #2b2b2b;
 }
 
 .cardBox:nth-child(3) .card-1 .back {
-  background: yellowgreen;
+  background: #2b2b2b;
 }
 
 .cardBox:nth-child(4) .card-1 .back {
-  background: tomato;
+  background: #2b2b2b;
 }
 
 .cardBox:nth-child(5) .card-1 .back {
-  background: cornflowerblue;
+  background: #2b2b2b;
 }
 
 .cardBox:nth-child(6) .card-1 .back {
-  background: orange;
+  background: #2b2b2b;
 }
 
 .cardBox:nth-child(7) .card-1 .back {
-  background: yellowgreen;
+  background: #2b2b2b;
 }
 
 .cardBox:nth-child(8) .card-1 .back {
-  background: tomato;
+  background: #2b2b2b;
+}
+.cardBox:nth-child(9) .card-1 .back {
+  background: #2b2b2b;
+}
+.cardBox:nth-child(10) .card-1 .back {
+  background: #2b2b2b;
+}
+.cardBox:nth-child(11) .card-1 .back {
+  background: #2b2b2b;
+}
+.cardBox:nth-child(12) .card-1 .back {
+  background: #2b2b2b;
+}
+.cardBox:nth-child(13) .card-1 .back {
+  background: #2b2b2b;
 }
 
 .cardBox:nth-child(2) .card-1 {
@@ -676,11 +874,17 @@ div .box:hover::before {
   }
 }
 
+.notess {
+  font-size: 1.05rem;
+  padding: 9px;
+}
 .notes-proj {
-  font-size: 1.1rem;
+  font-size: 1.03rem;
+  padding: 9px;
 }
 
 .btn-b {
+  background-color: #34495e;
   border-radius: 0%;
   border: none;
   width: 90%; 
@@ -717,6 +921,8 @@ div .box:hover::before {
   border: 1px solid #34495e;
   border-radius: 0.375rem;
   padding: 2%;
+  /* color: #fff;
+  background-color: var(--my-color); */
 }
 
 
@@ -724,9 +930,22 @@ div .box:hover::before {
   .right-status {
     width: 60%;
   }
+  .right-status-1 {
+    width: 60%;
+  }
+  .cop{
+    margin-top: 5px;
+  }
+}
+@media (min-width: 565px) {
+  .right-status-1 {
+    width: 32%;
+  }
 }
 
-
+.new-cope {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 
 
@@ -856,6 +1075,12 @@ div .box:hover::before {
   border-right: 1px solid #34495e;
   /* border-top: none; */
 
+}
+
+.border-radd {
+  border-bottom: 1px solid #34495e;
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
 }
 
 .experience-borders-400 {
@@ -1151,6 +1376,213 @@ div .box:hover::before {
 
 
 /* hover effect */
+
+/* .link-a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #FFF;
+  transition: width .4s;
+}
+
+.link-a:hover::after {
+  width: 100%;
+  transition: width .4s;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================== */
+/* to be added */
+
+.drop-in {
+  animation: drop-in 2s ease 2000ms backwards;
+}
+
+.drop-in-2 {
+  animation: drop-in 2s ease 3000ms backwards;
+}
+
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+
+
+
+
+
+/* PRELOADER CSS */
+.page-loader{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background: #272727;
+	z-index: 999999999999;
+	.txt{
+		color: #666;
+		text-align: center;
+		top: 40%;
+		position: relative;
+    font-size: 19px;
+		text-transform: uppercase;
+		letter-spacing: 0.3rem;
+		font-weight: bold;
+		line-height: 1.5;
+	}
+}
+.page-loader-1{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background: #272727;
+	z-index: 999999999999;
+	.txt{
+		color: #666;
+		text-align: center;
+		top: 40%;
+		position: relative;
+    font-size: 19px;
+		text-transform: uppercase;
+		letter-spacing: 0.3rem;
+		font-weight: bold;
+		line-height: 1.5;
+	}
+}
+
+/* SPINNER ANIMATION */
+.spinner {
+	position: relative;
+	top: 35%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #fff;
+
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+/* to be added */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

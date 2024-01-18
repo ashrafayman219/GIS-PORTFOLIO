@@ -28,19 +28,34 @@
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   </head>
 
-  <body class="home-projects d-flex flex-column min-vh-100">
+  <body class="home-projects d-flex flex-column min-vh-100" style="overflow: hidden">
     
+    <div class="page-loader-1">
+      <div class="spinner"></div>
+      <div class="txt">GO AHEAD!<br>WELCOME</div>
+    </div>
+
     <!-- Header -->
     <div class="header-project d-flex justify-content-center align-items-center">
-      <div class="text-center pt-4">
-        <h1 class="my-name display-3">Ashraf Ayman</h1>
-        <span class="social-icons">
+      <div class="first-project text-center ">
+        <h1 class="my-name my-name-3 display-3">Ashraf Ayman</h1>
+        <!-- <span class="social-icons">
           <a href="https://github.com/ashrafayman219" title="GitHub" target="_blank" class="github"><i class="fa-2x p-2 mb-2 ms-auto fa-brands fa-github"></i></a>
         </span>
         <div class="vr mb-2" style="color: snow; height: 38px; width: 2px; border-radius: 10%;"></div>
         <span class="social-icons">
           <a href="https://www.linkedin.com/in/ashraf-ayman" title="LinkedIn" target="_blank" class="linkedin"><i class="fa-2x p-2 mb-2 fa-brands fa-linkedin"></i></a>
-        </span>
+        </span> -->
+      
+
+        <!-- Github Button -->
+          <a href="https://github.com/ashrafayman219"  target="blank" class="social-icon github no-deco">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        <!-- LinkedIn Button -->
+          <a href="https://www.linkedin.com/in/ashraf-ayman" target="blank" class="social-icon linkedin no-deco">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a> 
       </div>
     </div>
 
@@ -51,34 +66,26 @@
 
 
     <!-- Navbar -->
-    <nav class="navbar nav-underline navbar-expand-lg sticky-top">
+    <nav class="navbar nav navbar-expand-lg sticky-top">
       <div class="container">
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="main">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mx-auto ">
             <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3 " aria-current="page" href="index.html">Home</a>
+              <a class="nav-link " aria-current="page" href="index.html">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3" href="resume.html">Resume</a>
+              <a class="nav-link " href="resume.html">RESUME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3" href="blog.html">Blog</a>
+              <a class="nav-link " href="blog.html">BLOG</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-
-
-
-
-
-
-
 
 
     <div class="pt-4">
@@ -114,18 +121,19 @@
             </div>
             <hr>
             <div>
-              <p>
-                The application can be viewed <a href="https://ashrafayman219.github.io/City-Selection.github.io/" 
-                target="_blank" class="link-projects-here">HERE</a>, with the GitHub repo available 
-                <a href="https://github.com/ashrafayman219/City-Selection.github.io#city-selectiongithubio" target="_blank">HERE</a>.
+              <p class="">
+                The application can be viewed 
+                <a href="https://ashrafayman219.github.io/City-Selection.github.io/" target="_blank" class="link-projects-here d-inline-block">HERE</a>
+                , with the GitHub repo available 
+                <a href="https://github.com/ashrafayman219/City-Selection.github.io#city-selectiongithubio" class="link-projects-here d-inline-block" target="_blank">HERE!</a>
               </p>
               <p>
                 Here's my latest project using ArcGIS API for JS, which displays a basemap containing data for cities in the world to filter based on their region.
               </p>
               <p>
-                I used new features also in ArcGIS API for JS such as #render with Break Values, #esriRequest, #drawCharts from external library such as google charts & charts.js.
+                I used new features also in ArcGIS API for JS such as render with Break Values, esriRequest, drawCharts from external library such as google charts & charts.js.
               </p>
-              <p>Some #widgets such as legend, measurement, and basemap gallery were used.</p>
+              <p>Some widgets such as legend, measurement, and basemap gallery were used.</p>
             </div>
 
           </div>
