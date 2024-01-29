@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>esri-Library documentation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body style="overflow: hidden">
+
+  <div class="page-loader-1">
+    <div class="spinner"></div>
+    <div class="txt">GO AHEAD!<br>WELCOME</div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <nav id="navbar">
+          <ul class="nav flex-column">
+            <header>esri-Library documentation</header>
+            <li class="nav-item">
+              <a class="nav-link introduction dd" href="#Introduction">Get started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link layout dd" href="#i">Initialize the map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link content dd" href="#z">Zoom To Coordinates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link content dd" href="#rlf">Remove Last Figure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link components dd" href="#xy">Convert XY To Latitude, Longitude</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link reference dd" href="#LD">Get Location Points Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link components dd" href="#stepth">Step Through Graphics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link reference dd" href="#sdr">Slide Show Run</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link content dd" href="#scr">Take ScreenShot</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-md-9">
+        <main id="main-doc">
+          <div class="head-box">
+            <h1>esri-Library</h1>
+          </div>
+
+          <!-- Get started -->
+          <section class="main-section" id="Introduction">
+            <header>
+              <h2>Get started</h2>
+            </header>
+            <article>
+              <h4>
+                1. Install and set up
+              </h4>
+              <p>
+                For AMD modules, add these script tags in the head of your web page:
+              </p>
+              <pre>
+                <code class="whitt">
+                &lt;link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+                &lt;script src="https://js.arcgis.com/4.28/">&lt;/script></code>
+              </pre>
+              <p>
+                Then add this script to the last of your HTML page:
+              </p>
+              <pre>
+                <code class="whitt">
+                &lt;script src="http://infopmo2030-001-site8.atempurl.com/esriGTLibrary/EsriFunctions.js">&lt;/script></code>
+              </pre>
+            </article>
+
+            <article>
+              <h4>
+                2. Add HTML
+              </h4>
+              <p>
+                Define an HTML <code class="highlight-rouge">div</code> element to display the map.
+              </p>
+              <pre>
+                <code class="whitt">
+                &lt;div id="displayMap">
+                &emsp; &emsp; &emsp;&lt;div id="searchDiv">
+                &emsp; &emsp; &emsp;&lt;/div&gt;
+                &lt;/div&gt;</code>
+              </pre>
+              <p>
+                Then add this CSS to the CSS file of your web page:
+              </p>
+              <pre>
+                <code class="whitt">
+                  html,
+                  body,
+                  #displayMap {
+                    &emsp; &emsp;padding: 0;
+                    &emsp; &emsp;margin: 0;
+                    &emsp; &emsp;height: 100%;
+                    &emsp; &emsp;width: 100%;
+                    &emsp; &emsp;-webkit-print-color-adjust: exact !important;
+                    &emsp; &emsp;print-color-adjust: exact !important;
+                  }
+                  
+                  .searchStyle {
+                    &emsp; &emsp;position: absolute;
+                    &emsp; &emsp;left: 3.2rem;
+                    &emsp; &emsp;top: 9px;
+                  }
+                  
+                  .esri-ui-top-left {
+                    &emsp; &emsp;align-items: baseline !important;
+                  }</code>
+              </pre>
+            </article>
+          </section>
+
+          <!-- Initialize the map -->
+          <section class="main-section" id="i">
+            <header>
+              <h2>Initialize the map</h2>
+            </header>
+            <article>
+              <h3>Call the <code class="highlight-rouge">initializeMap()</code> function to display the map:</h3>
+              <p>
+                This function takes a parameters and it's about:
+              </p>
+              <pre>
+                <code class="whitt">
+                  initializeMap(arrayOfDisplayedGraphics, withSketch = false, HTMLElementsArray=[], AddModalId="", HasLabel=false)
+                  // arrayOfDisplayedGraphics:  The array of the locations to display on the map (Array of objects),
+                  // withSketch : Whether to have sketch widget or not(Boolean),
+                  // HTMLElementsArray: All the html components to add in the map(Array of HTML elements[HTMLElement,Boolean])
+                  // HTMLElementsArray[(HTMLElement), button will replace the search elemnt or not (Boolean)]
+                  // HTMLElementsArray will send it to the addWidgets function that called inside the initializeMap function.
+                  
+                  // AddModalId: Uique ID for the html modal to perform the action of add  new location (String),
+                  // HasLabel: Whether to display label for each location or not(Boolean)</code>
+              </pre>
+              <p>
+                This function takes a specific <code class="highlight-rouge">object</code> of data (first parameter), the object must be like that:
+              </p>
+
+              <pre>
+                <code class="whitt">
+                  [ //Required(Array of Objects)
+                  &emsp;&emsp;{
+                    &emsp;&emsp;&emsp;&emsp;&emsp;"ProjectData": { //Required has the data attributes for Locations -->user can add any data
+                                  
+                      &emsp;&emsp;&emsp;&emsp;&emsp;},
+                      &emsp;&emsp;&emsp;&emsp;&emsp;"AllLocations": { //Required To hold all Locations (Object)
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; "LocationsData": [ //Required Details for each location (Array of Objects)
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{
+                          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"Color": "Green", //Required (String)
+                          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"GeometryType": "polygon",//Required (String)
+                          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"LocationPoints": //Required (Array of Arrays)
+                          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[ 
+                          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[
+                          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;5201549.45,   //X  Representation
+                          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2838632.45    //Y Representation
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;],
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;5201554.22,
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2838625.28
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;],
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;5201557.21,
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2838526.15
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;],
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;5201560.79,
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2838263.4
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;],
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[],[],[]
+                                                    
+                                                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;],
+                                                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"LocationId": 400 //Required
+                                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;},
+                                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{},{},{},
+                                      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;]
+                                &emsp;&emsp;&emsp;&emsp;&emsp;},
+                                &emsp;&emsp;&emsp;&emsp;&emsp;"Center": //Required to centralize the map (Array)
+                                &emsp;&emsp;&emsp;&emsp;&emsp;[
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;43.34, //Required  latitude
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;26.2, //Required  longitude
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;11 //Required  zoom
+                              &emsp;&emsp;&emsp;&emsp;&emsp;],
+                              &emsp;&emsp;&emsp;&emsp;&emsp;"LabelData": 208 //Optional data for labels  (String)
+                          &emsp;&emsp;}
+                          &emsp;&emsp;,{},{},{},
+              ]</code>
+              </pre>
+
+            </article>
+          </section>
+
+          <!-- Zoom To Coordinates -->
+          <section class="main-section" id="z">
+            <header>
+              <h2>Zoom To Coordinates</h2>
+            </header>
+            <article>
+              <h3>Call the <code class="highlight-rouge">ZoomTOCoordinates()</code> function to zoom to specific location:</h3>
+              <p>
+                This function takes a parameters and it's about:
+              </p>
+              <pre>
+                <code class="whitt">
+                  ZoomTOCoordinates(id)
+                  // id:  The id of the location that called (ProjectLocationId of ProjectData in the above object).</code>
+              </pre>
+            </article>
+          </section>
+
+          <!-- GetLocationPointsDetails -->
+          <section class="main-section" id="rlf">
+            <header>
+              <h2>Remove Last Figure</h2>
+            </header>
+            <article>
+              <h3>Call the <code class="highlight-rouge">RemoveLastFigure()</code> function:</h3>
+              <p>
+                This function don't takes any parameters:
+              </p>
+              <pre>
+                <code class="whitt">
+                  RemoveLastFigure()
+                  // Use this function to remove last graphics if the user delete the graphics from the map.</code>
+              </pre>
+            </article>
+          </section>
+
+
+          <!-- Convert XY To LAT, LONG -->
+          <section class="main-section" id="xy">
+            <header>
+              <h2>Convert XY To Latitude, Longitude</h2>
+            </header>
+            <article>
+              <h3>Call the <code class="highlight-rouge">ConvertXY_To_LATLONG()</code> function to convert from PCS to GCS:</h3>
+              <p>
+                This function takes a parameters and it's about:
+              </p>
+              <pre>
+                <code class="whitt">
+                  ConvertXY_To_LATLONG(graphic)
+                  // graphic:  The graphic that displayed on the map in Projected Coordinate System.</code>
+              </pre>
+            </article>
+          </section>
+
+          <!-- GetLocationPointsDetails -->
+          <section class="main-section" id="LD">
+            <header>
+              <h2>Get Location Points Details</h2>
+            </header>
+            <article>
+              <h3>Call the <code class="highlight-rouge">GetLocationPointsDetails()</code> function:</h3>
+              <p>
+                This function don't takes any parameters:
+              </p>
+              <pre>
+                <code class="whitt">
+                  GetLocationPointsDetails()
+                  // This function return the geometry data of the graphic.</code>
+              </pre>
+            </article>
+          </section>
+
+          <!-- stepThroughGraphics -->
+          <section class="main-section" id="stepth">
+            <header>
+              <h2>Step Through Graphics</h2>
+            </header>
+            <article>
+              <h3>Call the <code class="highlight-rouge">stepThroughGraphics()</code> function to step step through graphics on the map:</h3>
+              <p>
+                This function takes a parameters and it's about:
+              </p>
+              <pre>
+                <code class="whitt">
+                  stepThroughGraphics(view, gra_MainGL, index, IsActive)
+                  // view: The view of the map,
+                  // gra_MainGL: The graphics layer that displayed the graphics on the map,
+                  // index: The index of the graphic in the graphics layer,
+                  // IsActive: A flag to confirm if you need to show the modal to the current graphic or not</code>
+              </pre>
+            </article>
+          </section>
+
+          <!-- SlideShowRun -->
+          <section class="main-section" id="sdr">
+            <header>
+              <h2>Slide Show Run</h2>
+            </header>
+            <article>
+              <h3>Call the <code class="highlight-rouge">SlideShowRun()</code> function to call the above function:</h3>
+              <p>
+                This function takes a parameters and it's about:
+              </p>
+              <pre>
+                <code class="whitt">
+                  SlideShowRun(index, IsActive)
+                  // index: The index of the graphic in the graphics layer,
+                  // IsActive: A flag to confirm if you need to show the modal to the current graphic or not</code>
+              </pre>
+            </article>
+          </section>
+
+          <!-- Take ScreenShot -->
+          <section class="main-section" id="scr">
+            <header>
+              <h2>Take ScreenShot</h2>
+            </header>
+            <article>
+              <h3>Call the <code class="highlight-rouge">takeScreenShot()</code> function to take a screenshot of the current view of the map:</h3>
+              <p>
+                This function returns a url of the image that taken:
+              </p>
+            </article>
+          </section>
+
+
+        </main>
+
+        <hr />
+        <footer>
+          <p>&copy 2024 Gulf Terminal</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(window).on('load',function(){
+  // if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)
+  // {
+  //   document.body.style.overflowY = "hidden";
+  //   $(this).scrollTop(0);
+  // } 
+  // console.log(document.body, "document.body")
+  // document.body.classList.add(".fadde")
+	setTimeout(function(){ // allowing 3 secs to fade out loader
+    $('.page-loader-1').fadeOut('slow');
+    // document.body.classList.add(".fadde")
+    document.body.style.overflow = "auto";
+	},1000);
+});
+  </script>
+</body>
+
+</html>
