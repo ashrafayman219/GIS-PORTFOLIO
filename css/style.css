@@ -1511,7 +1511,17 @@ div .box:hover::before {
 
 
 
+.ul-new {
+  padding-left: 3rem;
+  columns: 2;
+}
 
+
+@media screen and (max-width: 767px){
+  .ul-new{
+    columns: 1;
+  }
+}
 
 
 /* to be added */
